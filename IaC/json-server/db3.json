@@ -1,0 +1,22 @@
+{
+  "veiculos": [
+    {
+      "id": 1,
+      "nome": "Chevrolet Onix",
+      "categoria": "Econômico",
+      "preco": 120
+    },
+    {
+      "id": 2,
+      "nome": "Toyota Corolla",
+      "categoria": "Sedan",
+      "preco": 200
+    },
+    {
+      "id": 3,
+      "nome": "Toyota Corolla Cross Hybrid",
+      "categoria": "SUV",
+      "preco": 280
+    }
+  ]
+}

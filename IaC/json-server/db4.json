@@ -1,0 +1,64 @@
+{
+  "veiculos": [
+    {
+      "id": 1,
+      "nome": "Chevrolet Onix",
+      "categoria": "Econômico",
+      "preco": 120
+    },
+    {
+      "id": 2,
+      "nome": "Toyota Corolla",
+      "categoria": "Sedan",
+      "preco": 200
+    },
+    {
+      "id": 3,
+      "nome": "Toyota Corolla Cross Hybrid",
+      "categoria": "SUV",
+      "preco": 280
+    },
+    {
+      "id": 4,
+      "nome": "Hyundai Azera",
+      "categoria": "Confort",
+      "preco": 320
+    },
+    {
+      "id": 5,
+      "nome": "Honda City",
+      "categoria": "Hatch",
+      "preco": 110
+    },
+    {
+      "id": 6,
+      "nome": "Ford Ka",
+      "categoria": "Econômico",
+      "preco": 90
+    },
+    {
+      "id": 7,
+      "nome": "Renault Sandero",
+      "categoria": "Econômico",
+      "preco": 85
+    },
+    {
+      "id": 8,
+      "nome": "Chevrolet Captiva",
+      "categoria": "SUV",
+      "preco": 110
+    },
+    {
+      "id": 9,
+      "nome": "Chevrolet Celta",
+      "categoria": "Econômico",
+      "preco": 80
+    },
+    {
+      "id": 10,
+      "nome": "Hyundai HB20",
+      "categoria": "Econômico",
+      "preco": 130
+    }
+  ]
+}

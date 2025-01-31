@@ -1,0 +1,67 @@
+version: '3.3'
+
+services:
+  php-apache:
+    build:
+      context: .
+      dockerfile: IaC/php-apache/Dockerfile
+    container_name: rentcars_backend
+    volumes:
+      - ./backend:/var/www/html
+    ports:
+      - "8000:80"
+    depends_on:
+      - db
+      - json-server
+    networks:
+      - rentcars_network
+
+  json-server:
+    build:
+      context: ./IaC/json-server  # Ajustando o caminho para a pasta json-server
+      dockerfile: Dockerfile
+    container_name: json-server
+    ports:
+      - "3001:3001"
+      - "3002:3002"
+      - "3003:3003"
+      - "3004:3004"
+    volumes:
+      - ./IaC/json-server:/app
+    networks:
+      - rentcars_network
+
+  node:
+    build:
+      context: . 
+      dockerfile: IaC/node/Dockerfile
+    container_name: rentcars_frontend
+    ports:
+      - "3000:3000"  # Porta do React
+    volumes:
+      - ./frontend:/app
+    networks:
+      - rentcars_network
+
+  db:
+    image: mysql:8.0
+    container_name: rentcars_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: rentcars
+      MYSQL_USER: rentcars_user
+      MYSQL_PASSWORD: rentcars_pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - rentcars_network
+
+volumes:
+  db_data:
+
+networks:
+  rentcars_network:
+    driver: bridge
