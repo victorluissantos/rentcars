@@ -85,6 +85,27 @@ Exemplo de URL para consulta de veículos:
 http://json-server:3001/veiculos
 ```
 
+🚀 Rodando o Frontend
+1️⃣ Instalar Dependências do Frontend
+
+Como a pasta node_modules está no .gitignore e não está sendo versionada, você precisará instalar as dependências do frontend dentro do contêiner Docker.
+
+Primeiro, acesse o contêiner do frontend e instale as dependências com o seguinte comando:
+```bash
+docker exec -it node bash
+npm install
+```
+Isso cria a pasta node_modules e instala as dependências do frontend dentro do contêiner Docker.
+
+
+2️⃣ Rodar o Frontend
+
+Após as dependências estarem instaladas, você pode rodar o servidor de desenvolvimento do frontend. Para isso, execute:
+```bash
+npm run dev
+```
+Isso vai iniciar o frontend e você poderá acessá-lo no navegador. Por padrão, o servidor de desenvolvimento ficará disponível na URL http://localhost:3000.
+
 ## 🚨 Erros e Soluções
 
 - **Erro: "Failed to connect to localhost"**
